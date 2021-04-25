@@ -1,4 +1,11 @@
-posts:
+getOne:
+   path: /posts/{!id}
+   controller: App\Controller\PostController::getOne
+   methods: GET
+   requirements:
+      id: '\d+'
+
+getAll:
    path: /posts
-   controller: App\Controller\PostController::posts
+   controller: App\Controller\PostController::getAll
    methods: GET
